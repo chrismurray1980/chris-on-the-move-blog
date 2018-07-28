@@ -1,0 +1,13 @@
+section {
+  border: solid 1px orange;
+  display: flex;
+  flex-direction: column;
+  margin: 20px; }
+
+.blog-img {
+  height: 150px;
+  width: 150px;
+  float: left;
+  margin: 5px 5px; }
+
+/*# sourceMappingURL=style.css.map */
