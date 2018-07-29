@@ -1,13 +1,51 @@
-section{
-    border: solid 1px orange;
+body { 
+    /*image location*/
+    background-image:url("/static/img/sky.jpg");
+    
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale image*/
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@mixin textcolor($property) {
+    color: $property;
+}
+
+#title-color {  
+    @include textcolor(#aac4e9); 
+}
+
+.navbar .navbar-collapse .navbar-nav > li > a {
+  @include textcolor(#aac4e9); 
+  margin-right: 50px;
+}
+
+section {
+    border: solid 2px orange;
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    margin: 50px 20px;
+    background-color:#f6f4f4;
+    text-align: justify;
+    padding: 20px;
+    
+        h2 {
+            margin-bottom: 20px;
+            @include textcolor(#aac4e9);
+            }
+            
+        p {
+            margin-top: 0px;
+        }
 }
 
 .blog-img {
     height: 150px;
     width: 150px;
     float: left;
-    margin: 5px 5px;
+    margin: 6px 20px 0px 0px;
 }

@@ -1,13 +1,38 @@
+body {
+  /*image location*/
+  background-image: url("/static/img/sky.jpg");
+  /* Full height */
+  height: 100%;
+  /* Center and scale image*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+#title-color {
+  color: #aac4e9; }
+
+.navbar .navbar-collapse .navbar-nav > li > a {
+  color: #aac4e9;
+  margin-right: 50px; }
+
 section {
-  border: solid 1px orange;
+  border: solid 2px orange;
   display: flex;
   flex-direction: column;
-  margin: 20px; }
+  margin: 50px 20px;
+  background-color: #f6f4f4;
+  text-align: justify;
+  padding: 20px; }
+  section h2 {
+    margin-bottom: 20px;
+    color: #aac4e9; }
+  section p {
+    margin-top: 0px; }
 
 .blog-img {
   height: 150px;
   width: 150px;
   float: left;
-  margin: 5px 5px; }
+  margin: 6px 20px 0px 0px; }
 
 /*# sourceMappingURL=style.css.map */
