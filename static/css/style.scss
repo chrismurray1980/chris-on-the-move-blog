@@ -1,51 +1,115 @@
-body { 
-    /*image location*/
-    background-image:url("/static/img/sky.jpg");
-    
-    /* Full height */
-    height: 100%; 
-
-    /* Center and scale image*/
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+body {
+    height: 100%;
+    background: {
+        image: url("/static/img/sky.jpg");
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+    }
 }
 
-@mixin textcolor($property) {
-    color: $property;
+a:hover { 
+    text-decoration:none;
+    color:#f5bf5c;
+    transition: ease-in-out 1s;
 }
 
-#title-color {  
-    @include textcolor(#aac4e9); 
+.linkcolor {
+    color:#aac4e9;
+    font-weight: bold;
 }
 
-.navbar .navbar-collapse .navbar-nav > li > a {
-  @include textcolor(#aac4e9); 
-  margin-right: 50px;
+.headingcolor {
+    color: #468ef4;
+}
+
+#title-color {
+    font-size:25px;
+    margin-left: 70px;
+    @extend .linkcolor;
+}
+
+
+
+.page-nav-link {
+    margin-right: 100px;
+    font-size: 20px;
+    @extend .linkcolor;
+    @extend a:hover;
 }
 
 section {
-    border: solid 2px orange;
+    border: solid 2px #f5bf5c;
     display: flex;
     flex-direction: column;
-    margin: 50px 20px;
-    background-color:#f6f4f4;
+    margin: 60px 80px;
+    background-color: #fafafa;
     text-align: justify;
     padding: 20px;
-    
-        h2 {
-            margin-bottom: 20px;
-            @include textcolor(#aac4e9);
-            }
-            
-        p {
-            margin-top: 0px;
-        }
+
+    h2 {
+        margin-bottom: 20px;
+        @extend .headingcolor;
+    }
+
+    p {
+        margin-top: 0px;
+    }
 }
 
 .blog-img {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     float: left;
     margin: 6px 20px 0px 0px;
+}
+
+.page-footer {
+    text-align: center;
+}
+
+.page-return {
+    display: inline-block;
+    margin-bottom: 20px;
+    font: {
+        size: 20px;
+        weight: bold;
+    }
+    text-decoration: none;
+    @extend .headingcolor;
+    @extend a:hover;
+}
+
+form {margin-left: 15%;}
+
+.request-label {
+    font: {
+        weight:bold;
+    }
+}
+
+.request {
+    width: 100%;
+    margin-bottom: 10px;
+    display: block;
+    background-color: #aac4e9;
+    &::placeholder {
+        padding-left: 5px;;
+    }
+}
+
+#submit{
+      margin-top: 2%;
+      font-weight: bold;
+      background-color: #aac4e9; 
+      border: solid 1px #f5bf5c;
+}
+
+.widgets{
+    border: 1px solid;
+    margin: 20px;
+}
+
+.pph{display:inline-block;
+    margin-left: 20%;
 }
