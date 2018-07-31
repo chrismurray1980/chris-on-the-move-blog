@@ -1,9 +1,13 @@
 body {
   height: 100%;
-  background-image: url("/static/img/sky.jpg");
+  background-image: url("http://wilakeweather.com/wp-content/uploads/2012/08/cloud-fluffy-lamb.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; }
+
+#home {
+  width: 100%;
+  display: inline-block; }
 
 a:hover, .page-nav-link, .page-return {
   text-decoration: none;
@@ -14,7 +18,7 @@ a:hover, .page-nav-link, .page-return {
   color: #aac4e9;
   font-weight: bold; }
 
-.headingcolor, .blog-section h2, .page-return {
+.headingcolor, .blog-section h2, .blog-section-small h2, .page-return {
   color: #468ef4; }
 
 #title-color {
@@ -25,22 +29,28 @@ a:hover, .page-nav-link, .page-return {
   margin-right: 100px;
   font-size: 20px; }
 
-.blog-section {
+.blog-section, .blog-section-small {
   border: solid 2px #f5bf5c;
   display: flex;
   flex-direction: column;
-  margin: 60px 80px;
+  margin: 80px 80px;
   background-color: #fafafa;
   text-align: justify;
   padding: 20px; }
-  .blog-section h2 {
+  .blog-section h2, .blog-section-small h2 {
     margin-bottom: 20px; }
-  .blog-section p {
-    margin-top: 0px; }
+  .blog-section h4, .blog-section-small h4 {
+    color: #f5bf5c; }
+  .blog-section p, .blog-section-small p {
+    margin-top: 0px;
+    font-size: 20px; }
+
+.blog-section-small {
+  margin-top: 0; }
 
 .blog-img {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   float: left;
   margin: 6px 20px 0px 0px; }
 
@@ -55,7 +65,9 @@ a:hover, .page-nav-link, .page-return {
   text-decoration: none; }
 
 .request-label {
-  font-weight: bold; }
+  color: #f5bf5c;
+  font-weight: bold;
+  font-size: 20px; }
 
 .request {
   width: 100%;
@@ -63,7 +75,9 @@ a:hover, .page-nav-link, .page-return {
   display: block;
   background-color: #aac4e9; }
   .request::placeholder {
-    padding-left: 5px; }
+    padding-left: 5px;
+    font-size: 18px;
+    color: #fdfdfd; }
 
 #submit {
   margin-top: 2%;
@@ -76,12 +90,20 @@ a:hover, .page-nav-link, .page-return {
   margin: 20px; }
 
 .pph {
-  display: inline-block;
-  margin: 0 auto;
-  width: 80%; }
+  margin: 2% 7% 3% 13%;
+  width: 80%;
+  padding: 0;
+  padding-left: 8px; }
 
 .linkedin {
-  margin: 0 auto;
-  width: 93%; }
+  margin: 0 7% 0 13%;
+  width: 80%;
+  padding: 0; }
+
+.project-img {
+  height: 90%;
+  width: 96%;
+  display: inline-block;
+  margin: 5% 2%; }
 
 /*# sourceMappingURL=style.css.map */
