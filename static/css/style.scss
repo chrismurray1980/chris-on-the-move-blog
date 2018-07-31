@@ -38,7 +38,7 @@ a:hover {
     @extend a:hover;
 }
 
-section {
+.blog-section {
     border: solid 2px #f5bf5c;
     display: flex;
     flex-direction: column;
@@ -80,7 +80,6 @@ section {
     @extend a:hover;
 }
 
-form {margin-left: 15%;}
 
 .request-label {
     font: {
@@ -111,5 +110,11 @@ form {margin-left: 15%;}
 }
 
 .pph{display:inline-block;
-    margin-left: 20%;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.linkedin{
+    margin: 0 auto;
+    width: 93%;
 }

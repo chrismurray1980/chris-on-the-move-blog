@@ -1,5 +1,6 @@
 $(document).ready(function() {
     
+    //Contact form submit button user feedback//
     
     $("#submit").click(function() {
         $(this).css({"background-color": "#f5bf5c", "border":"solid 1px #f5bf5c" }).text("Sent!");
@@ -12,4 +13,6 @@ $(document).ready(function() {
             $(this).css("background-color", "#f5bf5c");
         }
         });
+        
+   
 })
