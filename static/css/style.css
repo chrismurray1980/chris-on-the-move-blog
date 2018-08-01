@@ -1,3 +1,7 @@
+.page-font, .linkcolor, #title-color, .page-nav-link, .blog-section, .request-label, .request, #submit {
+  font-family: 'PT Sans Narrow', sans-serif; }
+
+/*---------------------------------------- page background */
 body {
   height: 100%;
   background-image: url("http://wilakeweather.com/wp-content/uploads/2012/08/cloud-fluffy-lamb.jpg");
@@ -5,31 +9,41 @@ body {
   background-repeat: no-repeat;
   background-size: cover; }
 
+/*---------------------------------------- title and navbar */
 #home {
   width: 100%;
-  display: inline-block; }
+  background-color: #343a40; }
 
-a:hover, .page-nav-link, .page-return {
+a:hover, .page-nav-link, .bottom-footer, .home-icon {
   text-decoration: none;
   color: #f5bf5c;
   transition: ease-in-out 1s; }
 
 .linkcolor, #title-color, .page-nav-link {
-  color: #aac4e9;
-  font-weight: bold; }
-
-.headingcolor, .blog-section h2, .blog-section-small h2, .page-return {
-  color: #468ef4; }
+  color: #fafafa; }
+  .linkcolor font, #title-color font, .page-nav-link font {
+    weight: bold;
+    size: 25px; }
 
 #title-color {
-  font-size: 25px;
+  padding: 15px 0;
+  font-size: 30px;
   margin-left: 70px; }
 
-.page-nav-link {
-  margin-right: 100px;
-  font-size: 20px; }
+.navbar-nav {
+  margin-left: 10%;
+  width: 90%; }
 
-.blog-section, .blog-section-small {
+.nav-item {
+  font-size: 25px;
+  width: 20%;
+  text-align: center; }
+
+/*---------------------------------------- blog sections */
+.headingcolor, .blog-section h2 {
+  color: #468ef4; }
+
+.blog-section {
   border: solid 2px #f5bf5c;
   display: flex;
   flex-direction: column;
@@ -37,73 +51,93 @@ a:hover, .page-nav-link, .page-return {
   background-color: #fafafa;
   text-align: justify;
   padding: 20px; }
-  .blog-section h2, .blog-section-small h2 {
-    margin-bottom: 20px; }
-  .blog-section h4, .blog-section-small h4 {
+  .blog-section h2 {
+    margin-bottom: 30px; }
+  .blog-section h4 {
     color: #f5bf5c; }
-  .blog-section p, .blog-section-small p {
+  .blog-section p {
     margin-top: 0px;
-    font-size: 20px; }
+    font-size: 22px; }
 
-.blog-section-small {
-  margin-top: 0; }
+/*---------------------------------------- contact form */
+.request-label {
+  margin-left: 10%;
+  color: #f5bf5c;
+  font-weight: bold;
+  font-size: 22px; }
 
+.request {
+  width: 80%;
+  margin-left: 10%;
+  margin-bottom: 10px;
+  display: block;
+  background-color: #aac4e9; }
+  .request::placeholder {
+    padding-left: 5px;
+    font-size: 20px;
+    color: #fdfdfd; }
+
+#submit {
+  width: 10%;
+  margin-left: 45%;
+  margin-top: 2%;
+  font-weight: bold;
+  background-color: #f5bf5c;
+  border: solid 2px #f5bf5c;
+  color: #fafafa;
+  font-size: 25px; }
+
+/*---------------------------------------- footer */
+.page-footer {
+  display: inline-block;
+  text-align: center;
+  width: 100%; }
+  .page-footer a {
+    display: inline-block;
+    text-decoration: none; }
+
+.bottom-footer {
+  font-size: 25px;
+  font-weight: bold;
+  color: #fafafa;
+  margin-bottom: 40px;
+  margin-left: 125px; }
+
+/*---------------------------------------- images */
 .blog-img {
   height: 250px;
   width: 250px;
   float: left;
   margin: 6px 20px 0px 0px; }
 
-.page-footer {
-  text-align: center; }
-
-.page-return {
-  display: inline-block;
-  margin-bottom: 20px;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none; }
-
-.request-label {
-  color: #f5bf5c;
-  font-weight: bold;
-  font-size: 20px; }
-
-.request {
-  width: 100%;
-  margin-bottom: 10px;
-  display: block;
-  background-color: #aac4e9; }
-  .request::placeholder {
-    padding-left: 5px;
-    font-size: 18px;
-    color: #fdfdfd; }
-
-#submit {
-  margin-top: 2%;
-  font-weight: bold;
-  background-color: #aac4e9;
-  border: solid 1px #f5bf5c; }
-
-.widgets {
-  border: 1px solid;
-  margin: 20px; }
-
-.pph {
-  margin: 2% 7% 3% 13%;
-  width: 80%;
-  padding: 0;
-  padding-left: 8px; }
-
-.linkedin {
-  margin: 0 7% 0 13%;
-  width: 80%;
-  padding: 0; }
-
 .project-img {
-  height: 90%;
-  width: 96%;
+  height: 80%;
+  width: 86%;
   display: inline-block;
-  margin: 5% 2%; }
+  margin: 10% 7%; }
+
+/*---------------------------------------- icons */
+.title-icon {
+  font-size: 30px;
+  margin-right: 10px;
+  color: #fafafa; }
+
+.blog-icon {
+  font-size: 27px;
+  margin-right: 1%; }
+
+.home-icon {
+  font-size: 30px;
+  font-weight: bold;
+  color: #fafafa; }
+
+.linked-in {
+  line-height: 1;
+  float: right;
+  margin-right: 80px;
+  font-size: 40px;
+  color: #fafafa;
+  background-color: #5e94f2;
+  padding: 1px 5px 2px 5px; }
 
 /*# sourceMappingURL=style.css.map */
