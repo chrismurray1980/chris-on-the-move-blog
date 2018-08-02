@@ -1,4 +1,4 @@
-.page-font, .linkcolor, #title-color, .page-nav-link, .blog-section, .request-label, .request, #submit {
+.page-font, .linkcolor, #title-color, .page-nav-link, .blog-section, .blog-section-small, .request-label, .request, #submit {
   font-family: 'PT Sans Narrow', sans-serif; }
 
 /*---------------------------------------- page background */
@@ -28,36 +28,60 @@ a:hover, .page-nav-link, .bottom-footer, .home-icon {
 #title-color {
   padding: 15px 0;
   font-size: 30px;
-  margin-left: 70px; }
+  margin: 15px 0 15px 70px; }
 
-.navbar-nav {
-  margin-left: 10%;
-  width: 90%; }
+.navbar-toggler {
+  color: #fafafa;
+  font-size: 30px;
+  margin: 15px 0;
+  margin-left: 0px;
+  line-height: 1.5; }
 
-.nav-item {
+.navbar-list {
+  width: 100%; }
+  @media screen and (min-width: 993px) {
+    .navbar-list {
+      margin-left: 10%;
+      width: 100%; } }
+
+.nav-item-link {
   font-size: 25px;
   width: 20%;
-  text-align: center; }
+  margin: 15px 0;
+  text-align: center;
+  display: inline-block; }
+  @media screen and (min-width: 993px) {
+    .nav-item-link {
+      margin-top: 20px;
+      width: 18%; } }
 
 /*---------------------------------------- blog sections */
-.headingcolor, .blog-section h2 {
+.headingcolor, .blog-section h2, .blog-section-small h2, .home-icon {
   color: #468ef4; }
 
-.blog-section {
+.blog-section, .blog-section-small {
   border: solid 2px #f5bf5c;
   display: flex;
   flex-direction: column;
-  margin: 80px 80px;
+  margin: 7% 7%;
+  width: 86%;
   background-color: #fafafa;
+  opacity: 0.8;
   text-align: justify;
   padding: 20px; }
-  .blog-section h2 {
+  .blog-section h2, .blog-section-small h2 {
     margin-bottom: 30px; }
-  .blog-section h4 {
+  .blog-section h4, .blog-section-small h4 {
     color: #f5bf5c; }
-  .blog-section p {
-    margin-top: 0px;
+  .blog-section p, .blog-section-small p {
+    margin: 0px;
     font-size: 22px; }
+
+.blog-section-small {
+  width: 40%;
+  float: left;
+  margin: 0 -1% 7% 7%;
+  min-height: 350px; }
 
 /*---------------------------------------- contact form */
 .request-label {
@@ -99,7 +123,7 @@ a:hover, .page-nav-link, .bottom-footer, .home-icon {
 .bottom-footer {
   font-size: 25px;
   font-weight: bold;
-  color: #fafafa;
+  color: #468ef4;
   margin-bottom: 40px;
   margin-left: 125px; }
 
@@ -111,7 +135,7 @@ a:hover, .page-nav-link, .bottom-footer, .home-icon {
   margin: 6px 20px 0px 0px; }
 
 .project-img {
-  height: 80%;
+  height: 70%;
   width: 86%;
   display: inline-block;
   margin: 10% 7%; }
@@ -126,12 +150,19 @@ a:hover, .page-nav-link, .bottom-footer, .home-icon {
   font-size: 27px;
   margin-right: 1%; }
 
-.home-icon {
-  font-size: 30px;
-  font-weight: bold;
-  color: #fafafa; }
+.home-button {
+  display: inline-block;
+  text-align: right;
+  width: 100%; }
+  .home-button a {
+    display: inline-block;
+    text-decoration: none; }
 
-.linked-in {
+.home-icon {
+  font-size: 20px;
+  font-weight: bold; }
+
+#linkedIn {
   line-height: 1;
   float: right;
   margin-right: 80px;
@@ -139,5 +170,9 @@ a:hover, .page-nav-link, .bottom-footer, .home-icon {
   color: #fafafa;
   background-color: #5e94f2;
   padding: 1px 5px 2px 5px; }
+
+/*---------------------------collapsed-class*/
+.deactivated {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

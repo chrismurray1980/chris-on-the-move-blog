@@ -2,7 +2,6 @@
     font-family: 'PT Sans Narrow', sans-serif;
 }
 
-
 /*---------------------------------------- page background */
 
 body {
@@ -42,19 +41,35 @@ a:hover {
     padding: 15px 0;
     font-size: 30px;
     @extend .page-font;
-    margin-left: 70px;
+    margin: 15px 0 15px 70px;
     @extend .linkcolor;
 }
 
-.navbar-nav {
-    margin-left: 10%;
-    width: 90%;
+.navbar-toggler {
+    color: #fafafa;
+font-size: 30px;
+margin: 15px 0;
+    margin-left: 0px;
+line-height: 1.5;
 }
 
-.nav-item {
+.navbar-list {
+    width:100%;
+    @media screen and (min-width: 993px) {
+       margin-left: 10%;
+        width: 100%; }
+    
+}
+
+.nav-item-link {
     font-size: 25px;
     width: 20%;
+    margin:15px 0;
     text-align: center;
+    display: inline-block;
+     @media screen and (min-width: 993px) {
+       margin-top:20px;
+        width: 18%; }
     
 }
 
@@ -72,12 +87,14 @@ a:hover {
     border: solid 2px #f5bf5c;
     display: flex;
     flex-direction: column;
-    margin: 80px 80px;
+    margin: 7% 7%;
+    width:86%;
     background-color: #fafafa;
+    opacity: 0.8;
     text-align: justify;
     padding: 20px;
     @extend .page-font;
-
+    
     h2 {
         margin-bottom: 30px;
         @extend .headingcolor;
@@ -88,11 +105,18 @@ a:hover {
     }
 
     p {
-        margin-top: 0px;
+        margin: 0px;
         font-size: 22px;
     }
 }
 
+.blog-section-small {
+    @extend .blog-section;
+    width:40%;
+    float: left;
+    margin: 0 -1% 7% 7%;
+    min-height: 350px;
+} 
 /*---------------------------------------- contact form */
 
 .request-label {
@@ -132,8 +156,8 @@ a:hover {
 }
 
 /*---------------------------------------- footer */
-
-.page-footer {
+   
+   .page-footer{
     display: inline-block;
     text-align: center;
     width: 100%;
@@ -142,14 +166,13 @@ a:hover {
     display: inline-block;
     text-decoration: none;
     }
-}
-    
+} 
 .bottom-footer {
     font: {
         size: 25px;
         weight: bold;
     }
-    color: #fafafa;
+    color: #468ef4;
     @extend a:hover;
     margin-bottom: 40px;
     margin-left: 125px;
@@ -165,7 +188,7 @@ a:hover {
 }
 
 .project-img {
-    height: 80%;
+    height: 70%;
     width: 86%;
     display: inline-block;
     margin: 10% 7%;
@@ -184,21 +207,39 @@ a:hover {
     margin-right: 1%;
 }
 
+.home-button {
+    display: inline-block;
+    text-align: right;
+    width: 100%;
+
+    a {
+    display: inline-block;
+    text-decoration: none;
+    }
+}
+
 .home-icon {
     font: {
-        size: 30px;
+        size: 20px;
         weight: bold;
     }
-    color: #fafafa;
+    @extend .headingcolor;
     @extend a:hover;
 }
 
-.linked-in {
+#linkedIn {
     line-height: 1;
      float: right; 
      margin-right: 80px;
      font-size: 40px;
      color: #fafafa;
      background-color: #5e94f2;
-    padding: 1px 5px 2px 5px;
+     padding: 1px 5px 2px 5px;
+}
+
+/*---------------------------collapsed-class*/
+
+.deactivated{
+    display: none;
+
 }
