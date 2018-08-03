@@ -1,6 +1,6 @@
-.page-font {
-    font-family: 'PT Sans Narrow', sans-serif;
-}
+/*---------------------------------------- page background */
+
+%page-font {font-family: 'PT Sans Narrow', sans-serif;}
 
 /*---------------------------------------- page background */
 
@@ -14,115 +14,148 @@ body {
     }
 }
 
+/*----------------------------------------placeholders*/
 
-/*---------------------------------------- title and navbar */
+/*page font*/
+%page-font {font-family: 'PT Sans Narrow', sans-serif;}
 
-#home{
+/*header and footer background*/
+%page-border {
     width:100%;
     background-color: #343a40;
-}
-
-a:hover { 
-    text-decoration:none;
-    color:#f5bf5c;
-    transition: ease-in-out 1s;
-}
-
-.linkcolor {
     color:#fafafa;
-    @extend .page-font;
-    font {
+    font: {
        weight: bold;
-       size: 25px;
+       size: 30px;
     }
+    a:hover{text-decoration: none;}
 }
 
-#title-color {
-    padding: 15px 0;
+/*---------------------------------------- navbar*/
+.navbar {
+    @extend %page-font;
+    @extend %page-border;
+    padding: 0;
+}
+
+.title-icon {
     font-size: 30px;
-    @extend .page-font;
-    margin: 15px 0 15px 70px;
-    @extend .linkcolor;
-}
-
-.navbar-toggler {
+    margin-right: 10px;
     color: #fafafa;
-font-size: 30px;
-margin: 15px 0;
-    margin-left: 0px;
-line-height: 1.5;
 }
 
+.title-style {
+    @extend %page-border;
+    width: 30%;
+    padding: 15px 0;
+    margin: 0 15px 0 70px;
+}
+
+.title-link {
+    @extend %page-border; 
+    font-size: 25px;
+    padding: 0;
+    margin: 15px 0 15px 70px;
+}
+
+.navbar-toggler-icon {
+    @extend %page-border;
+    margin: 15px 0;
+    margin-left: 0px;
+    line-height: 1.5;
+}
 .navbar-list {
-    width:100%;
     @media screen and (min-width: 993px) {
-       margin-left: 10%;
+       margin: 0 0 0 10%;
         width: 100%; }
-    
 }
 
 .nav-item-link {
+    padding-top: 8px;
     font-size: 25px;
     width: 20%;
-    margin:15px 0;
     text-align: center;
     display: inline-block;
-     @media screen and (min-width: 993px) {
-       margin-top:20px;
-        width: 18%; }
-    
+    @media screen and (min-width: 993px) {
+        width: 18%; 
+    }
 }
 
-.page-nav-link {
-    @extend .linkcolor;
-    @extend a:hover;}
+/*---------------------------------------- footer */
+   
+.page-footer {
+    @extend %page-border;
+    text-align: center;
+    padding: 7px 0;
+    font-size: 22px;
+
+/*fix footer to page bottom*/
+    position:fixed;
+    bottom:0;
+    left:0;
+        a {color: #fafafa;}
+        a:hover {
+            color: #f5bf5c;
+            transition: ease-in-out 2s;
+        }
+} 
+
+#linkedIn {
+    line-height: 1;
+     float: right; 
+     margin-top: 2px;
+     margin-right: 20px;
+     font-size: 25px;
+     color: #fafafa;
+     opacity: 0.9;
+     background-color: #5e94f2;
+     padding: 1px 5px 2px 5px;
+}
 
 /*---------------------------------------- blog sections */
-
-.headingcolor {
-    color: #468ef4;
-}
 
 .blog-section {
     border: solid 2px #f5bf5c;
     display: flex;
     flex-direction: column;
-    margin: 7% 7%;
-    width:86%;
+    margin: 5% 10% 7% 10%;
+    width: 80%;
     background-color: #fafafa;
-    opacity: 0.8;
+    opacity: 0.7;
     text-align: justify;
-    padding: 20px;
-    @extend .page-font;
+    padding: 20px 20px 40px 20px;
+    @extend %page-font;
     
     h2 {
-        margin-bottom: 30px;
-        @extend .headingcolor;
+        margin: 20px 0 40px 0;
+        color: #468ef4;
     }
     
     h4 {
+        text-align: center;
         color:#f5bf5c;
+        margin: 20px 0;
     }
 
     p {
         margin: 0px;
+        padding: 0 10px;
         font-size: 22px;
     }
 }
 
 .blog-section-small {
     @extend .blog-section;
-    width:40%;
     float: left;
+    width:40%;
     margin: 0 -1% 7% 7%;
-    min-height: 350px;
 } 
 /*---------------------------------------- contact form */
 
 .request-label {
-    margin-left: 10%;
+    margin: 1% 0 1% 10%;
     color:#f5bf5c;
-    @extend .page-font;
+    @extend %page-font;
     font: {
         weight:bold;
         size: 22px;
@@ -130,21 +163,22 @@ line-height: 1.5;
 }
 
 .request {
-    @extend .page-font;
+    @extend %page-font;
+    height: 30px;
     width: 80%;
     margin-left: 10%;
     margin-bottom: 10px;
     display: block;
     background-color: #aac4e9;
     &::placeholder {
-        padding-left: 5px;;
-        font-size: 20px;
+        padding: 5px;
+        font-size: 22px;
         color: #fdfdfd;
     }
 }
 
 #submit{
-  @extend .page-font;
+  @extend %page-font;
   width: 10%;
   margin-left: 45%;
   margin-top: 2%;
@@ -155,36 +189,13 @@ line-height: 1.5;
   font-size: 25px;
 }
 
-/*---------------------------------------- footer */
-   
-   .page-footer{
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-
-    a {
-    display: inline-block;
-    text-decoration: none;
-    }
-} 
-.bottom-footer {
-    font: {
-        size: 25px;
-        weight: bold;
-    }
-    color: #468ef4;
-    @extend a:hover;
-    margin-bottom: 40px;
-    margin-left: 125px;
-}
-
 /*---------------------------------------- images */
 
 .blog-img {
     height: 250px;
     width: 250px;
     float: left;
-    margin: 6px 20px 0px 0px;
+    margin: 6px 20px 0px 10px;
 }
 
 .project-img {
@@ -196,11 +207,7 @@ line-height: 1.5;
 
 /*---------------------------------------- icons */
 
-.title-icon {
-    font-size: 30px;
-    margin-right: 10px;
-    color: #fafafa;
-}
+
 
 .blog-icon {
     font-size: 27px;
@@ -218,28 +225,11 @@ line-height: 1.5;
     }
 }
 
-.home-icon {
-    font: {
-        size: 20px;
-        weight: bold;
-    }
-    @extend .headingcolor;
-    @extend a:hover;
-}
 
-#linkedIn {
-    line-height: 1;
-     float: right; 
-     margin-right: 80px;
-     font-size: 40px;
-     color: #fafafa;
-     background-color: #5e94f2;
-     padding: 1px 5px 2px 5px;
-}
+
 
 /*---------------------------collapsed-class*/
 
 .deactivated{
     display: none;
-
 }
