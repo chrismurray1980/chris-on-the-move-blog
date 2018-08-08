@@ -6,12 +6,31 @@
 
 body {
     height: 100%;
+    min-height: 1000px;
     background: {
         image: url("http://wilakeweather.com/wp-content/uploads/2012/08/cloud-fluffy-lamb.jpg");
         position: center;
         repeat: no-repeat;
         size: cover;
     }
+}
+
+/*---------------------------------------- images */
+
+.blog-img {
+    height: 90%;
+    width: 90%;
+    margin: 5%;
+    @media screen and (min-width: 600px){float: left; height: 25%; width: 25%; margin: 1.5% 3% 0.5% 5%;}
+    @media screen and (min-width: 992px) {height: 20%; width: 20%; margin: 1% 2% 0.5% 5%;}
+    @media screen and (min-width: 1200px) {height: 15%; width: 15%; margin: 0.5% 2% 0.5% 5%;}
+}
+
+.project-img {
+    height: 70%;
+    width: 86%;
+    display: inline-block;
+    margin: 10% 7%;
 }
 
 /*----------------------------------------placeholders*/
@@ -43,18 +62,10 @@ body {
 .title-icon {
     font-size: 15px;
     color: #fafafa;
-    @media screen and (min-width: 600px) {
-      font-size: 20px;
-    }
-    @media screen and (min-width: 768px) {
-        font-size: 25px;
-     }
-    @media screen and (min-width: 992px) {
-        font-size: 28px;
-     }
-    @media screen and (min-width: 1200px) {
-        font-size: 30px;
-     }
+    @media screen and (min-width: 600px) {font-size: 20px;}
+    @media screen and (min-width: 768px) {font-size: 25px;}
+    @media screen and (min-width: 992px) {font-size: 28px;}
+    @media screen and (min-width: 1200px) {font-size: 30px;}
 }
 
 .title-style {
@@ -62,22 +73,10 @@ body {
     width: 80%;
     margin: 2%;
     font-size: 16px;
-    
-    @media screen and (min-width: 600px) {
-      font-size: 20px; 
-      margin: 0 0 0 3%;
-      padding: 15px 0;
-    }
-    @media screen and (min-width: 768px) {
-        font-size: 25px;
-     }
-    @media screen and (min-width: 992px) {
-        font-size: 28px;
-     }
-    @media screen and (min-width: 1200px) {
-        font-size: 30px;
-        width: 45%;
-     }
+    @media screen and (min-width: 600px) {font-size: 20px; margin: 0 0 0 3%; padding: 15px 0;}
+    @media screen and (min-width: 768px) {font-size: 25px;}
+    @media screen and (min-width: 992px) {font-size: 28px;}
+    @media screen and (min-width: 1200px) {font-size: 30px; width: 45%;}
 }
 
 .navbar-toggler-icon {
@@ -86,36 +85,18 @@ body {
     margin-right: 1%;
     line-height: 1.8;
     font-size: 15px;
-    
-    @media screen and (min-width: 600px) {
-        line-height: 1.6;
-        font-size: 20px;
-    }
-    @media screen and (min-width: 768px) {
-        font-size: 25px;
-     }
-    @media screen and (min-width: 992px) {
-        font-size: 28px;
-     }
-    @media screen and (min-width: 1200px) {
-        
-     }
+
+    @media screen and (min-width: 600px) {line-height: 1.6; font-size: 20px;}
+    @media screen and (min-width: 768px) {font-size: 25px;}
+    @media screen and (min-width: 992px) {font-size: 28px;}
 }
+
 .navbar-list {
     margin-left: 5%;
-     @media screen and (min-width: 600px) {
-
-    }
-    @media screen and (min-width: 768px) {
-        margin-left: 7%;
-     }
-    @media screen and (min-width: 992px) {
-        margin-left: 6%;
-     }
-    @media screen and (min-width: 1200px) {
-        width: 100%;
-     }
+    @media screen and (min-width: 992px) {margin-left: 6%;}
+    @media screen and (min-width: 1200px) {width: 100%;}
 }
+
 ul > .list-inline-item:not(:last-child){ margin-right: 0;}
 
 .nav-item-link {
@@ -124,167 +105,75 @@ ul > .list-inline-item:not(:last-child){ margin-right: 0;}
     display: inline-block;
     margin: 0 1%;
     & #About {margin-left: 2%;}
-    
-     @media screen and (min-width: 600px) {
-      
-    }
-    @media screen and(min-width: 768px) {         
-        }     
-    @media screen and (min-width: 992px) {       
-        }     
-    @media screen and (min-width: 1200px) {  
-        margin-top: 0.5%;
-       }
+    @media screen and (min-width: 1200px) {margin-top: 0.5%;}
 }
 
 #navbarNav > ul {
-    @media screen and (min-width: 1200px) {
-     margin:0;
-    }
+    @media screen and (min-width: 1200px) {margin:0;}
 }
 
 .title-link {
     @extend %page-border; 
     font-size: 15px;
     padding: 0;
-
-    @media screen and (min-width: 600px) {
-      font-size: 20px
-    }
-    @media screen and (min-width: 768px) {
-        
-     }
-    @media screen and (min-width: 992px) {
-       font-size: 25px 
-     }
-    @media screen and (min-width: 1200px) {
-        
-     }
-}
-/*---------------------------------------- footer */
-   
-.page-footer {
-    @extend %page-border;
-    text-align: center;
-    padding: 7px 0;
-    font-size: 11px;
-    font-weight: bold;
-    
-    @media screen and (min-width: 600px) {
-      padding: 7px 0;
-      font-size: 18px;
-    }
-    @media screen and (min-width: 768px) {
-        
-     }
-    @media screen and (min-width: 992px) {
-      font-size: 20px;
-     }
-    @media screen and (min-width: 1200px) {
-        
-     }
-
-/*fix footer to page bottom*/
-    position:fixed;
-    bottom:0;
-    left:0;
-        a {color: #fafafa;}
-        a:hover {
-            color: #f5bf5c;
-            transition: ease-in-out 2s;
-        }
-} 
-
-.return-col {
-        margin-top: 1%;
-    @media screen and (min-width: 600px) {
-      margin-top: 0.75%;
-    }
-    @media screen and (min-width: 768px) {
-        margin-top: 0.5%;
-     }
-    @media screen and (min-width: 992px) {
-        margin-top: 0.1%;
-     }
-    @media screen and (min-width: 1200px) {
-        
-     }
-    }
-
-#linkedIn {
-    
-     float: right; 
-     margin-top: 2px;
-     margin-right: 20px;
-     font-size: 12px;
-     color: #fafafa;
-     opacity: 0.9;
-     background-color: #5e94f2;
-     padding: 1px 5px 2px 5px;
-    
-     @media screen and (min-width: 600px) {
-        font-size: 20px;
-    }
-    @media screen and (min-width: 768px) {
-        
-     }
-    @media screen and (min-width: 992px) {
-        
-     }
-    @media screen and (min-width: 1200px) {
-
-     }
-     
+    @media screen and (min-width: 600px) {font-size: 20px;}
+    @media screen and (min-width: 992px) {font-size: 25px;}
 }
 
 /*---------------------------------------- blog sections */
 
 .blog-section {
+    @extend %page-font;
     border: solid 2px #f5bf5c;
     display: flex;
     flex-direction: column;
-    margin: 5% 10% 7% 10%;
-    width: 80%;
+    margin: 10% 5% 20% 5%;
+    padding: 5%;
+    width: 90%;
     background-color: #fafafa;
     opacity: 0.7;
     text-align: justify;
-    padding: 20px 20px 40px 20px;
-    @extend %page-font;
-    
-    h2 {
-        margin: 20px 0 40px 0;
-        color: #468ef4;
+    h2 {margin: 3% 0; color: #468ef4; font-size: 25px; text-align: center;}
+    h4 {text-align: center; color:#f5bf5c; margin: 5% 0; font-size: 18px;}
+    p {margin: 0%; padding: 0 5%; font-size: 18px;}
+    .blog-icon {margin-right: 2%;}
+  
+   @media screen and (min-width: 600px) {
+        margin: 7% 5% 20% 5%;
+        h2 {margin: 0% 0 5% 5%; font-size: 28px; text-align: justify;}
+        h4 {margin: 2% 5%; font-size: 20px;}
+        p {font-size: 20px;}
     }
     
-    h4 {
-        text-align: center;
-        color:#f5bf5c;
-        margin: 20px 0;
-    }
-
-    p {
-        margin: 0px;
-        padding: 0 10px;
-        font-size: 22px;
-    }
+    @media screen and (min-width: 768px) {margin-bottom: 15%;}
+    
+   @media screen and (min-width: 992px) {
+        margin-bottom: 10%;
+        h2 {font-size: 30px;}
+        h4 {font-size: 22px;}
+        p {font-size: 22px;}
+     }
+     
+     @media screen and (min-width: 1200px) {
+        padding-top: 4%;
+        h2 {margin: 0% 0 3% 5%; font-size: 30px;}
+        h4 {font-size: 25px;}
+        p {font-size: 22px;}
+     }
 }
 
-.blog-section-small {
-    @extend .blog-section;
-    float: left;
-    width:40%;
-    margin: 0 -1% 7% 7%;
-} 
+/*---------------------------collapsed-class*/
+
+.deactivated{display: none;}
+
 /*---------------------------------------- contact form */
 
 .request-label {
-    margin: 1% 0 1% 10%;
-    color:#f5bf5c;
     @extend %page-font;
-    font: {
-        weight:bold;
-        size: 22px;
-    }
+    margin: 2% 0 1% 10%;
+    color:#f5bf5c;
+    font: { weight:bold; size: 18px;}
+    @media screen and (min-width: 768px) {size: 20px;}
 }
 
 .request {
@@ -296,65 +185,65 @@ ul > .list-inline-item:not(:last-child){ margin-right: 0;}
     display: block;
     background-color: #aac4e9;
     &::placeholder {
-        padding: 5px;
-        font-size: 22px;
+        padding: 0 0 5px 5px;
+        font-size: 16px;
         color: #fdfdfd;
     }
+   @media screen and (min-width: 768px) {size: 18px;}
 }
 
 #submit{
   @extend %page-font;
-  width: 10%;
-  margin-left: 45%;
-  margin-top: 2%;
+  width: 30%;
+  margin-left: 35%;
+  margin-top: 5%;
   font-weight: bold;
   background-color: #f5bf5c; 
   border: solid 2px #f5bf5c;
   color: #fafafa;
-  font-size: 25px;
+  font-size: 20px;
+  @media screen and (min-width: 992px) { 
+    width: 20%;
+    margin-left: 40%; 
+    font-size: 22px;}
 }
 
-/*---------------------------------------- images */
+/*---------------------------------------- footer */
+   
+.page-footer {
+    @extend %page-border;
+    text-align: center;
+    padding: 7px 0;
+    font-size: 11px;
+    font-weight: bold;
+    @media screen and (min-width: 600px) {padding: 7px 0; font-size: 18px;}
+    @media screen and (min-width: 992px) {font-size: 20px;}
+    /*fix footer to page bottom*/
+    position:fixed;
+    bottom:0;
+    left:0;
+    a {color: #fafafa;}
+    a:hover {color: #f5bf5c; transition: ease-in-out 2s;}
+} 
 
-.blog-img {
-    height: 250px;
-    width: 250px;
-    float: left;
-    margin: 6px 20px 0px 10px;
-}
-
-.project-img {
-    height: 70%;
-    width: 86%;
-    display: inline-block;
-    margin: 10% 7%;
-}
-
-/*---------------------------------------- icons */
-
-
-
-.blog-icon {
-    font-size: 27px;
-    margin-right: 1%;
-}
-
-.home-button {
-    display: inline-block;
-    text-align: right;
-    width: 100%;
-
-    a {
-    display: inline-block;
-    text-decoration: none;
+.return-col {
+    margin-top: 1%;
+    @media screen and (min-width: 600px) {margin-top: 0.75%;}
+    @media screen and (min-width: 768px) {margin-top: 0.5%;}
+    @media screen and (min-width: 992px) {margin-top: 0.1%;}
     }
+
+#linkedIn {
+     float: right; 
+     margin-top: 2px;
+     margin-right: 20px;
+     font-size: 12px;
+     color: #fafafa;
+     opacity: 0.9;
+     background-color: #5e94f2;
+     padding: 1px 5px 2px 5px;
+     @media screen and (min-width: 600px) {font-size: 20px;}
 }
 
 
 
-
-/*---------------------------collapsed-class*/
-
-.deactivated{
-    display: none;
-}
