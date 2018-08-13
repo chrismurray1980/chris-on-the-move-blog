@@ -13,7 +13,6 @@ $(document).ready(function() {
         });
     // Page content hide/show function and link change on hover
 
-
     // Previous blog segment reveal
     $(".prev-blog-heading").click(function() {
             $(this).next("p").slideToggle().siblings("p").hide("slow");
@@ -40,7 +39,6 @@ $(document).ready(function() {
     //Contact form submit button user feedback//
     $("#submit").click(function() {
         $(this).css({ "background-color": "#aac4e9", "border": "solid 2px #f5bf5c" }).text("Sent!");
-        //document.forms["contactForm"].reset();//
     }).mouseenter(function() {
         $(this).css({ "background-color": "#aac4e9", "transition": "ease-in-out 1s" });
     }).mouseleave(function() {
@@ -60,8 +58,32 @@ $(document).ready(function() {
         $(this).css({ "opacity": 0.9, "transition": "ease-in-out 1s" });
     });
     //Linkedin icon user feedback        
-});
 
 //Return to top 
-$("#return").click(topFunction());
+    $("#return").click(topFunction());
 //Return to top
+});
+
+//send email
+    var myform = $("form#contactForm");
+    myform.submit(function(event){
+    	event.preventDefault();
+    
+    	var params = myform.serializeArray().reduce(function(obj, item) {
+         obj[item.name] = item.value;
+         return obj;
+      }, {});
+
+      var service_id = "gmail";
+    
+      var template_id = "blog_message";
+      
+      emailjs.send(service_id,template_id,params)
+      	.then(function(){ 
+           console.log("Sent!");
+         }, function(err) {
+           console.log("Send email failed!\r\n Response:\n " + JSON.stringify(err));
+        });
+      return false;
+    });
+//send email
