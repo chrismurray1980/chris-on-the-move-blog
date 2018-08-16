@@ -25,7 +25,6 @@ $(document).ready(function() {
         });
     // Previous blog segment reveal
 
-
     // Work done reveal
     $(".project-heading").click(function() {
         $(this).next("div").slideToggle().siblings("div").hide("slow");
@@ -59,9 +58,9 @@ $(document).ready(function() {
     });
     //Linkedin icon user feedback        
 
-//Return to top 
+    //Return to top 
     $("#return").click(topFunction());
-//Return to top
+    //Return to top
 });
 
 //send email
@@ -75,7 +74,6 @@ $(document).ready(function() {
       }, {});
 
       var service_id = "gmail";
-    
       var template_id = "blog_message";
       
       emailjs.send(service_id,template_id,params)
